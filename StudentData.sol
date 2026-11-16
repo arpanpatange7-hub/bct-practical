@@ -29,7 +29,9 @@ contract StudentData {
         return students.length;
     }
 
-    fallback() external {
+    receive() external payable { }  
+
+    fallback() external payable  {
         emit FallbackCalled(msg.sender);
     }
 }
