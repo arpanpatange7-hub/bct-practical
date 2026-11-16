@@ -21,4 +21,8 @@ contract BankAccount {
     function getBalance() external view returns (uint256) {
         return balances[msg.sender];
     }
+
+    receive() external payable {}
+
+    fallback() external payable {}
 }
